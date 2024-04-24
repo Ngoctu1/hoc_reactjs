@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import AlbumFeature from './features/Album';
-
+// npm install sass --force
 function App() {
   return (
     <div className="App">

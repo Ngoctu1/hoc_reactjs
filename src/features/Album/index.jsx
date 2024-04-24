@@ -26,7 +26,7 @@ function AlbumFeature(props) {
     ]
     return (
         <div>
-            <p>song</p>
+            <p>Nguyen Ngoc T</p>
             <AlbumList albumlist={Album} />
 
         </div>
