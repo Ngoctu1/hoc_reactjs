@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import AlbumFeature from './features/Album';
+import TodoList from './features/todo/component/todolist';
+import TodoFeature from './features/todo';
 // npm install sass --force
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <AlbumFeature />
+        <TodoFeature />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
