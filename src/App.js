@@ -1,28 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 import AlbumFeature from './features/Album';
-import TodoList from './features/todo/component/todolist';
+
 import TodoFeature from './features/todo';
+import { Routes, Route, Link, NavLink } from 'react-router-dom';
+
 // npm install sass --force
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <AlbumFeature />
-        <TodoFeature />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={logo} className="App-logo" alt="logo" />
+
+
+      <h1><NavLink to="/todo" activeClassName="active-menu"> todo </NavLink></h1>
+      <h2><NavLink to="/album">album</NavLink></h2>
+      <h3><NavLink to="/">home</NavLink></h3>
+      <Routes>
+
+        <Route path="/" element={<TodoFeature />} />
+        <Route path="/todo" element={<TodoFeature />} />
+        <Route path="/album" element={<AlbumFeature />} />
+      </Routes>
+
+
     </div>
   );
 }
